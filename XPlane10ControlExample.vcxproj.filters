@@ -108,6 +108,9 @@
     <ClInclude Include="lua543\lzio.h">
       <Filter>Header Files\lua</Filter>
     </ClInclude>
+    <ClInclude Include="LuaXplaneInterface.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.c">
@@ -218,9 +221,18 @@
     <ClCompile Include="lua\lzio.c">
       <Filter>Source Files\lua</Filter>
     </ClCompile>
+    <ClCompile Include="LuaXplaneInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="test1.lua">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="control.lua">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="test_control.lua">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

@@ -10,8 +10,17 @@
 // add headers that you want to pre-compile here
 #include "framework.h"
 
-// Windows (IBM?)
+// Windows Build (On)
 #define IBM 1
+
+// Apple Build (Off)
+#define APL 0
+
+// Linux Build (Off)
+#define LIN 0
+
+// We aren't Building X-Plane
+#define XPLM 0
 
 // Support XPlane 10 & Newer
 #define XPLM200

@@ -112,7 +112,8 @@
       </Command>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>copy $(OutputPath)$(TargetFileName) "$(XPlane10PluginPath)$(TargetFileName).xpl"</Command>
+      <Command>copy $(OutputPath)$(TargetFileName) "$(XPlane10PluginPath)$(TargetFileName).xpl"
+copy "$(ProjectDir)control.lua" "$(XPlane10PluginPath)control.lua"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -145,7 +146,8 @@
       </Command>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>copy $(OutputPath)$(TargetFileName) "$(XPlane10PluginPath)$(TargetFileName).xpl"</Command>
+      <Command>copy $(OutputPath)$(TargetFileName) "$(XPlane10PluginPath)$(TargetFileName).xpl"
+copy "$(ProjectDir)control.lua" "$(XPlane10PluginPath)control.lua"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -174,7 +176,8 @@
       </Command>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>copy $(OutputPath)$(TargetFileName) "$(XPlane10PluginPath)$(TargetFileName).xpl"</Command>
+      <Command>copy $(OutputPath)$(TargetFileName) "$(XPlane10PluginPath)$(TargetFileName).xpl"
+copy "$(ProjectDir)control.lua" "$(XPlane10PluginPath)control.lua"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -207,7 +210,8 @@
       </Command>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>copy $(OutputPath)$(TargetFileName) "$(XPlane10PluginPath)$(TargetFileName).xpl"</Command>
+      <Command>copy $(OutputPath)$(TargetFileName) "$(XPlane10PluginPath)$(TargetFileName).xpl"
+copy "$(ProjectDir)control.lua" "$(XPlane10PluginPath)control.lua"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -239,10 +243,12 @@
     <ClInclude Include="lua543\lundump.h" />
     <ClInclude Include="lua543\lvm.h" />
     <ClInclude Include="lua543\lzio.h" />
+    <ClInclude Include="LuaXplaneInterface.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.c" />
+    <ClCompile Include="LuaXplaneInterface.cpp" />
     <ClCompile Include="lua\lapi.c" />
     <ClCompile Include="lua\lauxlib.c" />
     <ClCompile Include="lua\lbaselib.c" />
@@ -280,7 +286,9 @@
     <ClCompile Include="PluginMain.c" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="control.lua" />
     <None Include="test1.lua" />
+    <None Include="test_control.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
